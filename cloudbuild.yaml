@@ -3,7 +3,7 @@ steps:
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/lab4', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/lab4']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['run', '-p', '80:3000', 'gcr.io/$PROJECT_ID/lab4']
+#  - name: 'gcr.io/cloud-builders/docker'
+#    args: ['run', '-p', '80:3000', 'gcr.io/$PROJECT_ID/lab4']
 options:
   logging: CLOUD_LOGGING_ONLY
