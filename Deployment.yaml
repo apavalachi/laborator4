@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-server
+  template:
+    metadata:
+      labels:
+        app: nodejs-server
+    spec:
+      containers:
+        - name: nodejs-server
+          image: sha256:3827627e7ec524d520b4ae1f7388ad4f579f4c02fa800c870019b66996825968
+          ports:
+            - containerPort: 3000
